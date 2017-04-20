@@ -9,13 +9,16 @@ namespace PartyInvites.Controllers
     public class HomeController : Controller
     {
         public ViewResult Index()
-        { int[] array = { 1, 2, 3 };
+        {
+            int hour = DateTime.Now.Hour;
+            ViewData["Greeting"] = hour < 12 ? "Good Morning" : "Good Afternoon";
 
-            ViewBag.BagThing = array;
-            ViewData["DataThing"] = array;
+            return View("MyView");            
+        }
 
-            return View("MyView");
-            
+        public ViewResult RsvpForm()
+        {
+            return View();
         }
     }
 }

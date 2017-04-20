@@ -11,7 +11,13 @@
 </head>
 <body>
     <div>
-        Hello World (From the view)
+        @ViewData["Greeting"] World (From the view)
+
+        <p>We're going to have a party (WOO!) You should come check it out ;D<br />
+        (Add some cool flair here eventually)
+
+        <a asp-action="RsvpForm">Go RSVP!</a>
+        </p>
     </div>
 </body>
 </html>
