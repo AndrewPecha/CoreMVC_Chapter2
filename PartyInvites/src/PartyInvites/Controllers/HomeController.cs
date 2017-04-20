@@ -8,28 +8,14 @@ namespace PartyInvites.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        public ViewResult Index()
+        { int[] array = { 1, 2, 3 };
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
+            ViewBag.BagThing = array;
+            ViewData["DataThing"] = array;
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Error()
-        {
-            return View();
+            return View("MyView");
+            
         }
     }
 }
