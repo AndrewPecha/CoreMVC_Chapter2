@@ -12,8 +12,28 @@
     <title>RsvpForm</title>
 </head>
 <body>
-    <div>
-        We are gonna RSVP Here
-    </div>
+    <form asp-action="RsvpForm" method="post">
+        <p>
+            <label asp-for="Name">Your Name:</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email">Your Email:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="Phone">Your Phone:</label>
+            <input asp-for="Phone" />
+        </p>
+        <p>
+            <label>Will you attend?</label>
+            <select asp-for="WillAttend">
+                <option value="">Choose an option</option>
+                <option value="true">Yeah, I'm awesome and I'm gonna be there!</option>
+                <option value="false">No, I hate fun and I'm just gonna stay home to cry.</option>
+            </select>
+        </p>
+        <button type="submit">Submit RSVP</button>
+    </form>
 </body>
 </html>
