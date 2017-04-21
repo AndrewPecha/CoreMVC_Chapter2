@@ -1,0 +1,2 @@
+#this will set a path based on the computer it's run on. We don't want it in the repo
+.vs
