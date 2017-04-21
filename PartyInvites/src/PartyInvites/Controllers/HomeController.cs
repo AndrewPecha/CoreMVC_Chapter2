@@ -26,8 +26,9 @@ namespace PartyInvites.Controllers
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse response)
         {
-            //TODO: Store responses
-            return View();
+            Repository.AddResponse(response);
+
+            return View("Thanks", response);
         }
     }
 }
