@@ -10,31 +10,40 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>RsvpForm</title>
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <form asp-action="RsvpForm" method="post">
-        <div asp-validation-summary="All"></div>
-        <p>
-            <label asp-for="Name">Your Name:</label>
-            <input asp-for="Name" />
-        </p>
-        <p>
-            <label asp-for="Email">Your Email:</label>
-            <input asp-for="Email" />
-        </p>
-        <p>
-            <label asp-for="Phone">Your Phone:</label>
-            <input asp-for="Phone" />
-        </p>
-        <p>
-            <label>Will you attend?</label>
-            <select asp-for="WillAttend">
-                <option value="">Choose an option</option>
-                <option value="true">Yeah, I'm awesome and I'm gonna be there!</option>
-                <option value="false">No, I hate fun and I'm just gonna stay home to cry.</option>
-            </select>
-        </p>
-        <button type="submit">Submit RSVP</button>
-    </form>
+    <div class="panel-success">
+        <div class="panel-heading text-center"><h4>RSVP</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="RsvpForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Your Name:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email">Your Email:</label>
+                    <input class="form-control" asp-for="Email" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone">Your Phone:</label>
+                    <input class="form-control" asp-for="Phone" />
+                </div>
+                <div class="form-group">
+                    <label>You Gonna Be There?</label>
+                    <select class="form-control" asp-for="WillAttend">
+                        <option value="">Choose An Option</option>
+                        <option value="true">Yeah I'll be there!</option>
+                        <option value="false">Naw, I hate fun..</option>
+                    </select>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Submit RSVP Form</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

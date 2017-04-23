@@ -8,15 +8,14 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Index</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <div>
-        @ViewData["Greeting"] World (From the view)
+    <div class="text-center">
+        <h3>We're gonna have a super fun party! (WOO!)</h3>
+        <h6>you're invited or something, I guess.</h6>
 
-        <p>We're going to have a party (WOO!) You should come check it out ;D<br />
-        (Add some cool flair here eventually)
-
-        <a asp-action="RsvpForm">Go RSVP!</a>
+        <a class="btn btn-primary" asp-action="RsvpForm">Go RSVP!</a>
         </p>
     </div>
 </body>

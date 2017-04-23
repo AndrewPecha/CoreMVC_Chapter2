@@ -11,7 +11,7 @@ namespace PartyInvites.Models
         [Required (ErrorMessage = "But I need to know your name!")]
         public string  Name { get; set; }
         [Required (ErrorMessage = "Gonna need your email address in case of cancellation..")]
-        [RegularExpression(".+\\@.+\\..+", ErrorMessage = "That's not a real email address, regex")]
+        [RegularExpression(".+\\@.+\\..+", ErrorMessage = "That's not a real email address")]
         //[EmailAddress (ErrorMessage = "That's not a real Email Address")]
         public string Email { get; set; }
         [Required (ErrorMessage = "What if I wanna be that friend that drunkenly calls you at 2 AM? GIMME YOUR NUMBAH!")]

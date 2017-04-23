@@ -10,27 +10,30 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Look at all these people!</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 </head>
 <body>
-    <h2>All these people are super cool party people!</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (PartyInvites.Models.GuestResponse response in Model)
-            {
+    <div class="panel-body">
+        <h2>All these people are super cool party people!</h2>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
                 <tr>
-                    <td>@response.Name</td>
-                    <td>@response.Email</td>
-                    <td>@response.Phone</td>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
                 </tr>
-            }
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach (PartyInvites.Models.GuestResponse response in Model)
+            {
+                    <tr>
+                        <td>@response.Name</td>
+                        <td>@response.Email</td>
+                        <td>@response.Phone</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>    
 </body>
 </html>
